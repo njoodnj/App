@@ -88,9 +88,9 @@ public class Main extends Activity {
             try {
                 JSONObject root = new JSONObject();
                 JSONObject user_date = root.getJSONObject("user_data");
-                NAME = user_date.optString("name");
-                PASSWORD = user_date.optString("password");
-                EMAIL = user_date.optString("email");
+                NAME = user_date.getString("name");
+                PASSWORD = user_date.getString("password");
+                EMAIL = user_date.getString("email");
             } catch (JSONException e) {
                 e.printStackTrace();
                 err = "Exception: "+e.getMessage();

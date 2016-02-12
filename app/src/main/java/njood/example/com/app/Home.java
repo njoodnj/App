@@ -7,7 +7,7 @@ import android.widget.TextView;
 public class Home extends Activity {
 
     String name, password, email, Err;
-    TextView nameTV, emailTV, passwordTV, err;
+    TextView nameTV, emailTV, passwordTV, welcomeTV, err;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,10 @@ public class Home extends Activity {
         email = getIntent().getStringExtra("email");
         Err = getIntent().getStringExtra("err");
 
-        nameTV.setText("Welcome "+name);
-        passwordTV.setText("Your password is "+password);
-        emailTV.setText("Your email is "+email);
+        welcomeTV.setText("name"+name);
+        nameTV.setText("name: "+name);
+        passwordTV.setText("password: "+password);
+        emailTV.setText("email: "+email);
         err.setText(Err);
     }
 }
